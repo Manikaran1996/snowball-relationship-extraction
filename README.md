@@ -1,5 +1,5 @@
 # snowball-relationship-extraction
-![Snowball Flowchart](/snowball_flowchart.png)
+<img src="./snowball_flowchart.png" align="center" />
 1. **Entity Resolution** - The most challenging and important step in explicit link extraction is of resolving the entities from mass media articles with the entities present in Neo4j graph database for which sophisticated ER algorithms have been used. 
 1. **Creating Subset** - The mongoDb database contains around 4.9 million articles crawled from various news portals. With an aim to extract *located in* and *works in* relations from an article having ORGANIZATION as one of the entities we created a subset of articles mentioning at least one organization which is featured in our neo4j graph database. It significantly reduced the number of articles to around 50,000.
 1. **Tagging** - The subset of articles are now tagged using the output of open-calais which provides the type, location, prefix, suffix etc of the entities present in the article.
