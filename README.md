@@ -14,3 +14,9 @@
 1. tagArticles-3 script to tag and store the articles in a collection instead of storing it in a dictionary. This is useful in case if the number of articles is more and can not be accomodated in a dictionary
 
 **Seed set Folder** It contains positive and negative seed set which we have created for extracting different kind of relations along with the articles in which those entities were mentioned
+
+### Snowball  
+Snowball is a semi-supervised relation extraction approach and it requires only handful of examples as seed for learning and extracting structured data from plain text documents. These seed sets generate numerous patterns to include named-entity tags, for example \textit{<ORGANIZATION> in <LOCATION>}, this pattern will only match the pair of strings connected by "in" and connected strings are tagged by tagger as entity of types <ORGANIZATION> and <LOCATION>.  
+**Command to run snowball**  
+` python2 Snowball.py paramters.cfg sentences_file seeds_file_positive seeds_file_negative similarity_threshold confidance_threshold`  
+In our experiments, setting similarity_threshold and confidence threshold to `0.7` gives the good result.
