@@ -7,3 +7,10 @@
 1. **Snowball Execution** - After tagging, we created positive and negative seed sets for extracting works in and located in relations which were fed to the snowball classifier along with the set of tagged articles and other params. The output file contained the name of related entities along with the confidence.
 1. **Verification** - These relations extracted from mass media articles are termed as explicit relations. We verified the extracted relations by reading the articles, the correct relations were pushed to the graph database thereby enriching the existing database.
 1. **Database Augmentation** - Database is augmented with new links extracted from news articles.    
+
+**Tag Articles Script**
+1. tagArticles-1 contains the code for tagging the resolved entities mentioned in the articles. The resolved entities were stored in a mongo db collection.
+1. tagArticles-2 this is another script to tag articles. In this script I tagged companies in graph database and the locations. Since, tagging the resolved locations only was not a good idea, as at a number of places locaion mentioned in the article could be a city in a district or the name of the location may contain some prefix like "North", "South" etc. So, I tagged all the locations mentioned in the article which were resolved later at the time of verification and data augmentation.
+1. tagArticles-3 script to tag and store the articles in a collection instead of storing it in a dictionary. This is useful in case if the number of articles is more and can not be accomodated in a dictionary
+
+**Seed set Folder** It contains positive and negative seed set which we have created for extracting different kind of relations along with the articles in which those entities were mentioned
